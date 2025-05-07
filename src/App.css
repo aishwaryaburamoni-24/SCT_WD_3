@@ -1,38 +1,129 @@
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h3 {
+  color: #333;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+  font-size: 18px;
+  color: #555;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Main Quiz Container */
 .App {
   text-align: center;
+  padding: 40px;
+  max-width: 600px;
+  margin: auto;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Progress Bar */
+.progress-bar-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.progress-bar {
+  width: 80%;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.progress-bar-filled {
+  height: 100%;
+  background-color: #4CAF50;
+  border-radius: 5px;
+}
+
+/* Score Page */
+.Score {
+  text-align: center;
+  padding: 40px;
+  font-size: 20px;
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #4CAF50;
+}
+
+/* Mobile and Tablet Responsive Styles */
+@media (max-width: 768px) {
+  /* Adjusting the main App container */
+  .App {
+    padding: 20px;
+    max-width: 100%;
+    box-shadow: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .progress-bar-container {
+    margin-bottom: 15px;
+  }
+
+  .progress-bar {
+    width: 100%;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 15px 30px;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  input[type="radio"], input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+  }
+
+  .Score {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 22px;
   }
 }
